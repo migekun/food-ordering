@@ -219,6 +219,7 @@
             </properties>
         </profile>
     </profiles>
+
     <build>
         <plugins>
             <plugin>
