@@ -7,13 +7,10 @@
     <modules>
         <module>order-service</module>
         <module>common</module>
-        <module>common/common-domain</module>
-        <!--        <module>common</module>-->
-<!--        <module>infrastructure</module>-->
-<!--        <module>customer-service</module>-->
-<!--        <module>payment-service</module>-->
-<!--        <module>restaurant-service</module>-->
-<!--        <module>order-service</module>-->
+        <module>infrastructure</module>
+        <module>customer-service</module>
+        <module>payment-service</module>
+        <module>restaurant-service</module>
     </modules>
 
     <parent>
@@ -195,30 +192,6 @@
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <spring.profiles.active>dev</spring.profiles.active>
-                <!--                <database.url>jdbc:postgresql://localhost:5432/orderdb</database.url>-->
-                <!--                <kafka.brokers>localhost:9092</kafka.brokers>-->
-            </properties>
-        </profile>
-        <profile>
-            <id>pro</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <spring.profiles.active>pro</spring.profiles.active>
-                <!--                <database.url>jdbc:postgresql://localhost:5432/orderdb</database.url>-->
-                <!--                <kafka.brokers>localhost:9092</kafka.brokers>-->
-            </properties>
-        </profile>
-    </profiles>
 
     <build>
         <plugins>

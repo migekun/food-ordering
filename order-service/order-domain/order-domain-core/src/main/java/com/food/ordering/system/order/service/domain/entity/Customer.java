@@ -19,12 +19,15 @@ public class Customer extends AggregateRoot<CustomerId> {
     public Customer(CustomerId customerId) {
         super.setId(customerId);
     }
+
     public String getUsername() {
         return username;
     }
+
     public String getFirstName() {
         return firstName;
     }
+
     public String getLastName() {
         return lastName;
     }

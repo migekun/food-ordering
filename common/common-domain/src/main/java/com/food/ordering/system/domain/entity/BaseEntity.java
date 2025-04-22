@@ -20,6 +20,7 @@ public abstract class BaseEntity<ID> {
         BaseEntity<?> that = (BaseEntity<?>) o;
         return id.equals(that.id);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(id);

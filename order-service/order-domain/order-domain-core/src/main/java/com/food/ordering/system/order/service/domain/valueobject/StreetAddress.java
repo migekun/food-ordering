@@ -4,20 +4,20 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class StreetAddress {
-    private final UUID uuid;
+    private final UUID id;
     private final String street;
     private final String postalCode;
     private final String city;
 
-    public StreetAddress(UUID uuid, String street, String postalCode, String city) {
-        this.uuid = uuid;
+    public StreetAddress(UUID id, String street, String postalCode, String city) {
+        this.id = id;
         this.street = street;
         this.postalCode = postalCode;
         this.city = city;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getId() {
+        return id;
     }
 
     public String getStreet() {
@@ -37,11 +37,11 @@ public class StreetAddress {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         StreetAddress that = (StreetAddress) o;
-        return uuid.equals(that.uuid) && street.equals(that.street) && postalCode.equals(that.postalCode) && city.equals(that.city);
+        return street.equals(that.street) && postalCode.equals(that.postalCode) && city.equals(that.city);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(uuid, street, postalCode, city);
+        return Objects.hash(street, postalCode, city);
     }
 }

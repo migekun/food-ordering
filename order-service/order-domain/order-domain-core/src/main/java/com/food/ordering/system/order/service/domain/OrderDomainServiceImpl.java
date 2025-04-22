@@ -1,4 +1,3 @@
-
 package com.food.ordering.system.order.service.domain;
 
 import com.food.ordering.system.order.service.domain.entity.Order;
@@ -66,8 +65,7 @@ public class OrderDomainServiceImpl implements OrderDomainService {
         order.getItems().forEach(orderItem -> restaurant.getProducts().forEach(restaurantProduct -> {
             Product currentProduct = orderItem.getProduct();
             if (currentProduct.equals(restaurantProduct)) {
-                currentProduct.updateWithConfirmedNameAndPrice(
-                        restaurantProduct.getName(),
+                currentProduct.updateWithConfirmedNameAndPrice(restaurantProduct.getName(),
                         restaurantProduct.getPrice());
             }
         }));
